@@ -5,3 +5,74 @@ body{
   background-size: cover; 
   height: 100vh;
 }
+/*aca configuramos como se veria en comptadora*/
+.desplegable{
+  background: #1e1e1e ;
+}
+.barras{
+  display: none;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+li{
+  list-style: none;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: block;
+}
+ul li a:hover{
+  background: #ff5722;
+}
+/*En el siguiente paso lo veremos como si fueses en un tablet*/
+@media(max-width: 850px){
+  .barras{
+    background: #1e1e1e;
+    display: block;
+  }
+  .desplegable{
+    transform: translate(-100%);
+    transition: 0.5s;
+    font-size: 1.5rem;
+    width: 50%;
+    background: rgba(red, green, blue, alpha);
+  }
+  ul {
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+  }
+  button{
+    margin: 20px;
+    border: none;
+  }
+  .boton_menu{
+    background-image: url('./images/menu.ico');
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    background-position: center;
+
+  }
+  /*con esta clase abro y cierro el menu*/
+  .abrir menu{
+    transform: translate(0%);
+    transform: 0.5s;
+  }
+}
+
+ 
