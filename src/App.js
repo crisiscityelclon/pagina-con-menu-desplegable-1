@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+let vacio= '';
 
 function App() {
+  const abrir_cerrar_menu = () => {
+    let menu_desplegable = document.getElementById('menu');
+    let boton_cerrar = document.getElementById('x');
+    menu_desplegable.classList.toggle('abrir_menu');
+    boton_cerrar.classList.toggle('colocar_x');
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <div className='barras'>
+          <button onClick={abrir_cerrar_menu} className='boton_menu' id='x'></button>
+        </div>
+        <nav id='menu' className='desplegable'>
+          <ul>
+            <li><a href={vacio}>Inicio</a></li>
+            <li><a href={vacio}>Galería</a></li>
+            <li><a href={vacio}>Proyectos</a></li>
+            <li><a href={vacio}>Contactos</a></li>
+          </ul>
+        </nav>
       </header>
-    </div>
+
+    </>
   );
+    
 }
+
 
 export default App;
